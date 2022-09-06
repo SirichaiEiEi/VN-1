@@ -8,12 +8,12 @@ public class FadeCanvas : MonoBehaviour
     bool fadeIn = false;
     bool fadeOut = false;
 
-    void ShowUI()
+    public void ShowUI()
     {
         fadeIn = true;
     }
 
-    void HideUI()
+    public void HideUI()
     {
         fadeOut = true;
     }

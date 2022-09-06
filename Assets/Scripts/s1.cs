@@ -12,6 +12,7 @@ public class s1 : MonoBehaviour
     Text textDisplay;
     int currentLine = 0;
     TW_MultiStrings_Regular tw;
+    FadeCanvas fadeCanvas;
 
     void Awake()
     {
@@ -19,13 +20,14 @@ public class s1 : MonoBehaviour
         //line = allText.Split("\n");
         textDisplay = GameObject.Find("Text").GetComponent<Text>();
         tw = GameObject.Find("Text").GetComponent<TW_MultiStrings_Regular>();
+        fadeCanvas = GameObject.Find("Canvas").GetComponent<FadeCanvas>();
         tw.MultiStrings = allText.Split("\n");
         textDisplay.text = tw.MultiStrings[0];
     }
 
-    private void Start()
+    void Start()
     {
-
+        fadeCanvas.ShowUI();
     }
 
     void Update()
@@ -37,7 +39,7 @@ public class s1 : MonoBehaviour
             {
                 if (SceneManager.GetActiveScene().name.CompareTo("S1") == 0)
                 {
-                   
+                    SceneManager.LoadScene("S2");
                 }
             }
             else tw.NextString();
