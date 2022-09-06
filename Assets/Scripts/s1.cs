@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using UnityEngine.SceneManagement;
 
 public class s1 : MonoBehaviour
 {
@@ -27,7 +28,14 @@ public class s1 : MonoBehaviour
         if (Input.GetMouseButtonDown(0))
         {
             currentLine++;
-            tw.NextString();
+            if (currentLine >= 12)
+            {
+                if (SceneManager.GetActiveScene().name.CompareTo("S1") == 0)
+                {
+                    SceneManager.LoadScene("S2");
+                }
+            }
+            else tw.NextString();
         }
     }
 
