@@ -39,7 +39,7 @@ public class s1 : MonoBehaviour
             {
                 if (SceneManager.GetActiveScene().name.CompareTo("S1") == 0)
                 {
-                    SceneManager.LoadScene("S2");
+                    fadeCanvas.HideUI();                    
                 }
             }
             else tw.NextString();

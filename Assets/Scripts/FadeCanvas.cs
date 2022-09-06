@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class FadeCanvas : MonoBehaviour
 {
@@ -40,6 +41,7 @@ public class FadeCanvas : MonoBehaviour
                 if (myUIGroup.alpha == 0)
                 {
                     fadeOut = false;
+                    SceneManager.LoadScene("S2");
                 }
             }
         }
