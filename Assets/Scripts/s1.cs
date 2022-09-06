@@ -10,13 +10,16 @@ public class s1 : MonoBehaviour
     string[] names = { "", "Fahsai" };
     Text textDisplay;
     int currentLine = 0;
+    TW_MultiStrings_Regular tw;
 
-    void Start()
+    void Awake()
     {
         string allText = textFile.text;
-        line = allText.Split("\n");
+        //line = allText.Split("\n");
         textDisplay = GameObject.Find("Text").GetComponent<Text>();
-        displayText();
+        tw = GameObject.Find("Text").GetComponent<TW_MultiStrings_Regular>();
+        tw.MultiStrings = allText.Split("\n");
+        textDisplay.text = tw.MultiStrings[0];
     }
 
     void Update()
@@ -24,7 +27,7 @@ public class s1 : MonoBehaviour
         if (Input.GetMouseButtonDown(0))
         {
             currentLine++;
-            displayText();
+            tw.NextString();
         }
     }
 
