@@ -10,12 +10,14 @@ public class s1 : MonoBehaviour
     string[] names = { "", "Fahsai" };
     Text textDisplay;
     int currentLine = 0;
+    TW_MultiStrings_Regular tw;
 
     void Start()
     {
         string allText = textFile.text;
         line = allText.Split("\n");
         textDisplay = GameObject.Find("Text").GetComponent<Text>();
+        tw = GetComponent<TW_MultiStrings_Regular>();
         displayText();
     }
 
