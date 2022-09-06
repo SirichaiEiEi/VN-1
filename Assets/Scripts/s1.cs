@@ -23,6 +23,11 @@ public class s1 : MonoBehaviour
         textDisplay.text = tw.MultiStrings[0];
     }
 
+    private void Start()
+    {
+
+    }
+
     void Update()
     {
         if (Input.GetMouseButtonDown(0))
@@ -32,7 +37,7 @@ public class s1 : MonoBehaviour
             {
                 if (SceneManager.GetActiveScene().name.CompareTo("S1") == 0)
                 {
-                    SceneManager.LoadScene("S2");
+                   
                 }
             }
             else tw.NextString();
