@@ -8,7 +8,7 @@ public class s1 : MonoBehaviour
 {
     public TextAsset textFile;
     string[] line = new string[12];
-    string[] names = { "", "Fahsai" };
+    string[] names = { "taoxao", "Fahsai" };
     Text textDisplay;
     int currentLine = 0;
     TW_MultiStrings_Regular tw;
